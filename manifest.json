@@ -1,0 +1,24 @@
+{
+"name":"Remove DN.se Paywall",
+"description":"Made by Valli",
+"version":"1",
+"manifest_version":2,
+"content_scripts": [
+    {
+      "matches": ["http://www.dn.se/*","https://www.dn.se/*", "http://www.di.se/*" , "https://www.di.se/*"],
+      "js": ["jquery-1.12.0.min.js",  "dn.js"]
+    }
+  ],
+  "background" : {
+    "scripts" : ["onToolClick.js"]
+  },
+  "browser_action": {
+    "default_icon": "pig-icon.png"
+  },
+  "permissions": [
+  "bookmarks",
+  "tabs",
+  "http://*/*", 
+  "https://*/*"    
+]
+}
